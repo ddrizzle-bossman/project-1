@@ -1,0 +1,45 @@
+﻿<Window x:Class="_193937Project1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_193937Project1"
+        mc:Ignorable="d"
+        Title="Build a computer project Dale Shewfelt" Height="350" Width="525" Cursor="SizeAll" Background="DeepSkyBlue" WindowState="Maximized" >
+    <ScrollViewer>
+        <StackPanel HorizontalAlignment="Center">
+            <Label x:Name="TitlePage" Content="Build Your Own COMPUTER!" FontSize="20" FontFamily="Cooper Black" Cursor="Hand" RenderTransformOrigin="0.5,0.5" Margin="0,0,194,0">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="100"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+                <Label.Effect>
+                    <DropShadowEffect Color="#FF5472FF" Opacity="0.69" ShadowDepth="3"/>
+                </Label.Effect>
+            </Label>
+            <Label HorizontalAlignment="Center" FontSize="20" FontFamily="Old English Text MT" Cursor="Wait" Background="{x:Null}" FontStyle="Italic" >By Dale Shewfelt
+            </Label>
+            <CheckBox x:Name="chkCPU" Checked="chkCPU_Checked"  DataContextChanged="CheckBox_DataContextChanged" Unchecked="chkCPU_Unchecked">
+                <Label Content="CPU"></Label>
+            </CheckBox>
+            <Label x:Name="cpuDetails" Visibility="Collapsed" Content="This is a pretty good cpu https://amzn.to/2v2wBP8"></Label>
+            <Image x:Name="cpuImage" Visibility="Collapsed" Source="\\HHSDC\193937$\My Documents\Cpu.jpg" Height="100"></Image>
+
+            <CheckBox x:Name="chkCPUC" Checked="chkCPUC_Checked"  DataContextChanged="CheckBox_DataContextChanged" Unchecked="chkCPUC_Unchecked">
+                <Label Content="CPU COOLER"></Label>
+            </CheckBox>
+            <Label x:Name="cpucDetails" Visibility="Collapsed" Content="This is a pretty good cpu https://amzn.to/2v2wBP8"></Label>
+            <Image x:Name="cpucImage" Visibility="Collapsed" Source="https://images-na.ssl-images-amazon.com/images/I/51Kc39zR8EL.jpg" Height="100"></Image>
+
+            <CheckBox x:Name="chkMTB" Checked="chkMTB_Checked"  DataContextChanged="CheckBox_DataContextChanged" Unchecked="chkMTB_Unchecked">
+                <Label Content="MOTHERBOARD"></Label>
+            </CheckBox>
+            <Label x:Name="mtbDetails" Visibility="Collapsed">Here is my motherboard stuff</Label>
+            <Image x:Name="mtbImage" Visibility="Collapsed" Source="https://images-na.ssl-images-amazon.com/images/I/91Rx29tuyAL._AC_SL1500_.jpg" Height="100"></Image>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
